@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Application Form</h2>
+            <form id="jobApplicationForm">
+                <div class="form-section">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position" required>
+                    <span class="error-message" id="positionError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="role">Which option best describes your current role?</label>
+                    <select name="role" id="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="fulltime">Full Time Job</option>
+                        <option value="parttime">Part Time Job</option>
+                        <option value="unemployed">Unemployed</option>
+                    </select>
+                    <span class="error-message" id="roleError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <p>Which area are you strongest in?</p>
+                    <label for="backend">
+                        <input id="backend" value="backend" type="radio" name="strength" required>Back-end
+                    </label>
+                    <label for="frontend">
+                        <input id="frontend" value="frontend" type="radio" name="strength" required>Front-end
+                    </label>
+                    <label for="both">
+                        <input id="both" value="both" type="radio" name="strength" required>Both equally
+                    </label>
+                    <span class="error-message" id="strengthError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <p>Which languages are you proficient in?</p>
+                    <label for="html"><input id="html" value="html" type="checkbox" name="languages"> HTML</label>
+                    <label for="css"><input id="css" value="css" type="checkbox" name="languages"> CSS</label>
+                    <label for="javascript"><input id="javascript" value="javascript" type="checkbox" name="languages"> JavaScript</label>
+                    <label for="Bootstrap"><input id="Bootstrap" value="Bootstrap" type="checkbox" name="languages"> Bootstrap</label><br>
+                    <span class="error-message" id="languagesError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="coverLetter">Cover Letter:</label>
+                    <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+                    <span class="error-message" id="coverLetterError"></span>
+                </div>
+                
+                <div class="form-section">
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <span class="error-message" id="resumeError"></span>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <p id="successMessage" class="hidden">Your application has been submitted successfully!</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
